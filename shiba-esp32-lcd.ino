@@ -21,9 +21,8 @@ void setup() {
   while (WiFi.status() != WL_CONNECTED)  // Connect to the WiFi network
   {
     lcd.setCursor(0, 1);
-    delay(500);
     lcd.write(0);
-    delay(250);
+    delay(2000);
   }
   lcd.println();
   lcd.clear();
