@@ -22,10 +22,6 @@ void setup() {
   {
     lcd.setCursor(0, 1);
     delay(500);
-    lcd.createChar(0, customChar1);
-    lcd.write(0);
-    delay(250);
-    lcd.createChar(0, customChar2);
     lcd.write(0);
     delay(250);
   }
