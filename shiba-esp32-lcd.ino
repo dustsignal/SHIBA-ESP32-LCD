@@ -63,11 +63,11 @@ void setup() {
 }
 
 void loop() {
-  double currentPrice = getSHIBPrice();  // Get the data
-  lcd.setCursor(0, 0);                   // Set cursor line 1 character 1
-  lcd.print("SHIB $");                  // Print current price
+  double currentPrice = getSHIBPrice();   // Get the data
+  lcd.setCursor(0, 0);                    // Set cursor line 1 character 1
+  lcd.print("SHIB $");                    // Print current price
   lcd.print(currentPrice, 13);            // Current price at 8 decimal places
-  if (prevPrice > 0) {                   // Check for price change
+  if (prevPrice > 0) {                    // Check for price change
     double change = currentPrice - prevPrice;
     lcd.setCursor(0, 1);
     if (change > 0) {
@@ -84,8 +84,8 @@ void loop() {
     }
   }
 
-  prevPrice = currentPrice;  // Update previous price
-  delay(1 * 60 * 1000);      // Wait for 19 minuets before updating
+  prevPrice = currentPrice;               // Update previous price
+  delay(2 * 60 * 1000);                   // Wait some amount of minuets before updating
 }
 
 double getSHIBPrice() {
